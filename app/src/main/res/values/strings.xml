@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Millioners Quotes</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="billioners">
+
+        <item>Bill Gates</item>
+        <item>Mark Zuckerberg</item>
+        <item>Mark Kuban</item>
+    </string-array>
+</resources>
