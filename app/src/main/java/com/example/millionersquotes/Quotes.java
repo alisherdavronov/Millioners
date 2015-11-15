@@ -18,18 +18,22 @@ public class Quotes extends Activity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.quotes);
-        String getQuote;
+
         textQuotes = (TextView) findViewById(R.id.tvQuotes);
         image = (ImageView) findViewById(R.id.imageBackground);
-        Bundle extras = getIntent().getExtras();
-        Bitmap bmp = (Bitmap) extras.getParcelable("imageurl");
-        getQuote = extras.getString("parseBillGates");
-        Log.e("Extra", getQuote);
-        // Toast.makeText(getApplicationContext(), getQuote, Toast.LENGTH_LONG).show();
-        textQuotes.setText(getQuote);
-        image.setImageBitmap(bmp);
 
+        Bundle extras = getIntent().getExtras();
+
+        //String name = extras.getString("name");
+        String story = extras.getString("story");
+        String imageName = extras.getString("imageName");
+
+        textQuotes.setText(story);
+
+        image.setImageResource(
+                getResources().getIdentifier(imageName, "drawable", getPackageName()));
     }
 }
 
